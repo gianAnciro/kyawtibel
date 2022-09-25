@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="http://fonts.cdnfonts.com/css/horror-type" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/Zw14zqXfcl6LzGD1/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("your story was succesfully submitted-gian anciro")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+</head>
+<body>
+</br>
+<div id="fire-text">Submit</div>
+
+
+
+
+
+<center>
+
+
+	<form id="myForm">
+		<label>Username</label>
+		<input name="name" />
+		<br/></br>
+		<label>Title</label>
+		<input name="title" />
+		<br/></br>
+
+<label for="story">Story</label>
+
+<textarea id="story" name="story">
+
+</textarea>
+		<br/></br>
+	</form>
+
+	<button onclick='SubForm()'>Submit</button>
+</center>
+
+<div id="circularMenu" class="circular-menu">
+
+  <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+<i class="fa fa-bars" aria-hidden="true"></i>
+  </a>
+
+  <menu class="items-wrapper">
+    <a href="records.html" class="menu-item fa fa-book"></a>
+    <a href="service.html" class="menu-item fa fa-briefcase"></a>
+    <a href="about.html" class="menu-item fa fa-question-circle"></a>
+<a href="index.html" class="menu-item fa fa-home"></a>
+  </menu>
+
+</div>
+
+
+
+
+        <script src="main.js" async defer></script>
+</body>
+</html>
